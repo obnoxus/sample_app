@@ -17,8 +17,9 @@ describe PagesController do
       response.should have_selector("title", :content => " | Home")
     end
     
-  end
+  end # end of - describe
 
+  
   describe "GET 'contact'" do
     
     it "should be successful" do
@@ -32,7 +33,8 @@ describe PagesController do
       response.should have_selector("title", :content => " | Contact")
     end
     
-  end
+  end # end of - describe
+  
   
   describe "GET 'about'" do
     
@@ -47,10 +49,23 @@ describe PagesController do
       response.should have_selector("title", :content => " | About")
     end
     
-  end  
+  end # end of - describe
   
   
-  
+  describe "GET 'help'" do
+    
+    it "should be successful" do
+      get 'help'
+      response.should be_success
+    end
+    
+    it "should have the right title" do
+      get 'help'
+      #response.should have_selector("title", :content => "Ruby on Rails Tutorial Sample App | Help")
+      response.should have_selector("title", :content => " | Help")
+    end
+    
+  end # end of - describe  
   
 
 end
