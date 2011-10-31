@@ -16,12 +16,12 @@ group :production do
   gem 'pg'
 end
 
-
+# Test related.
 group :development do
   gem 'rspec-rails', '2.0.1'
 end
 
-
+# Test related.
 group :test do
   gem 'rspec', '2.0.1'
   gem 'webrat', '0.7.1'
