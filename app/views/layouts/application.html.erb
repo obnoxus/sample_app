@@ -3,8 +3,7 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
-    <%= stylesheet_link_tag 'blueprint/screen.css', :media => 'screen' %>
-    <%= stylesheet_link_tag 'blueprint/print.css', :media => 'print' %>
+    <%= render 'layouts/stylesheets' %>
   </head>
   
   <body>
@@ -12,29 +11,13 @@
     
     <div class="container">
       
-      <div class="span-24">
-        Header
-      </div>
+      <%= render 'layouts/header' %>
       
-      
-      <div class="span-4">
-        First Column
-      </div>
-      
-      
-      <div class="span-16">
+      <section class="round">
         <%= yield %>
-      </div>
+      </section>   
       
-      
-      <div class="span-4 last">
-        Last Column
-      </div>      
-      
-      
-      <div class="span-24">
-        Footer
-      </div>      
+      <%= render 'layouts/footer' %>
       
     </div>
     
