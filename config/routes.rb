@@ -1,13 +1,16 @@
 SampleApp::Application.routes.draw do
   
+  get "users/new"
+
   # This is the old way and it is done automatically.
-  get "pages/home"
-  get "pages/contact"
-  get "pages/about"
-  get "pages/help"
+#  get "pages/home"
+#  get "pages/contact"
+#  get "pages/about"
+#  get "pages/help"
   
   
   # This is the new way of doing the above.
+  match '/signup',  :to => 'users#new'
   match '/about',   :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
   match '/help',    :to => 'pages#help'
